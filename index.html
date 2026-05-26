@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5B4T73L8');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정혜민 | 콘텐츠 마케터 포트폴리오</title>
+    
+    <meta name="description" content="고객의 마음을 움직이는 스토리텔링으로 브랜드의 가치를 연결하는 콘텐츠 마케터 정혜민입니다. 기획부터 콘텐츠 제작, 매체 집행까지 공백을 메웁니다.">
+    <meta name="keywords" content="정혜민, 콘텐츠 마케터, 디지털마케팅, 조말론, 딥티크, 프레쉬, 포트폴리오">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+
+    <style>
+        /* --- 1. 디자인 시스템 (군청 테마 & 기본 변수) --- */
+        :root {
+            --primary-navy: #0F1A2C;     /* 메인: 깊고 직관적인 다크 네이비 */
+            --secondary-blue: #2A4365;   /* 보조: 지적이고 안정적인 슬레이트 블루 */
+            --bg-light: #F8FAFC;         /* 배경: 깔끔하고 정돈된 소프트 화이트 */
+            --text-dark: #1E293B;        /* 본문: 가독성 높은 차분한 먹색 */
+            --text-muted: #64748B;       /* 부연 설명: 신뢰감을 주는 그레이 */
+            --border-color: #E2E8F0;     /* 경계선: 부드러운 연그레이 */
+        }
+
+        /* --- 2. 기본 초기화 및 부드러운 액션 설정 --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            /* 💡 버튼을 눌렀을 때 해당 영역으로 부드럽게 화면을 스크롤하는 액션 기능 */
+            scroll-behavior: smooth; 
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 공통 레이아웃 컨테이너 */
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        /* 클릭 액션을 극대화한 버튼 스타일 */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            padding: 14px 32px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid var(--primary-navy);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-blue);
+            border-color: var(--secondary-blue);
+            transform: translateY(-2px); /* 호버 시 가볍게 뜨는 마이크로 인터랙션 */
+        }
+
+        /* --- 3. 헤더 영역 (Navigation) --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            backdrop-filter: blur(8px); /* 상단 투명 유리창 효과 */
+        }
+
+        header .header-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            letter-spacing: 0.05em;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover {
+            color: var(--primary-navy);
+        }
+
+        /* --- 4. 히어로 섹션 (Main 카피 & 프로필 사진) --- */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            padding-top: 80px;
+        }
+
+        #hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            width: 100%;
+        }
+
+        .hero-text {
+            flex: 1.2;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.4;
+            margin-bottom: 24px;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .hero-image {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 사진 프레임 고급화 */
+        .photo-frame {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 3 / 4; /* 프로필 사진 규격 비율 */
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 15px 35px rgba(15, 26, 44, 0.08); /* 은은하고 직관적인 그림자 */
+            overflow: hidden;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 깨짐 없이 비율을 유지하며 가득 채움 */
+            display: block;
+        }
+
+        /* --- 5. 섹션 제목 --- */
+        section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 48px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        /* --- 6. 인적사항 & 역량 섹션 (Profile) --- */
+        #profile {
+            background-color: var(--bg-light);
+        }
+
+        .profile-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .info-table th, .info-table td {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .info-table th {
+            width: 100px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .info-table td a {
+            color: var(--secondary-blue);
+        }
+
+        .info-table td a:hover {
+            text-decoration: underline;
+        }
+
+        /* 직관적인 역량 디자인 구역 */
+        .skills-container h3 {
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .tag-item {
+            background-color: #ffffff;
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--secondary-blue);
+            font-weight: 500;
+        }
+
+        .cert-item {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        .cert-item span {
+            color: var(--text-muted);
+            margin-right: 12px;
+            font-weight: 300;
+        }
+
+        /* --- 7. 상세 이력 타임라인 섹션 (Experience) --- */
+        #experience {
+            background-color: #ffffff;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 850px;
+        }
+
+        .timeline-item {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        /* 세련된 세로선 인디케이터 구동 */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary-blue);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 6px;
+        }
+
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        /* --- 8. 컨택트 섹션 (Contact) --- */
+        #contact {
+            background-color: var(--bg-light);
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-box p {
+            margin-bottom: 35px;
+            color: var(--text-muted);
+        }
+
+        /* --- 9. 푸터 영역 --- */
+        footer {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        /* --- 10. ⚡ 반응형 미디어 쿼리 (스마트폰 및 태블릿 완벽 대응) ⚡ --- */
+        @media (max-width: 992px) {
+            .hero-text h1 { font-size: 2.3rem; }
+        }
+
+        @media (max-width: 768px) {
+            /* 모바일 화면 가독성을 위한 구조 재배치 */
+            #hero .container {
+                flex-direction: column-reverse; /* 모바일에서 사진이 상단, 카피가 하단으로 */
+                text-align: center;
+                gap: 40px;
+                padding: 60px 20px;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+            .profile-wrapper {
+                grid-template-columns: 1fr; /* 2열로 나오던 프로필을 모바일에서는 1열로 수직 정렬 */
+                gap: 40px;
+            }
+            nav ul {
+                display: none; /* 모바일 환경의 깔끔함을 위한 네비게이션 간소화 */
+            }
+            section {
+                padding: 60px 0;
+            }
+            section h2 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .photo-frame {
+                max-width: 260px; /* 모바일 기기 크기에 맞춘 프로필 사진 최적화 */
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B4T73L8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">JEONG HYEMIN</a>
+            <nav>
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>콘텐츠로 마음을 움직이고,<br>데이터로 성과를 증명합니다.</h1>
+                    <p>인사이트 도출부터 크리에이티브 제작, 퍼포먼스 광고 집행까지.<br>
+                    기획과 실행의 공백을 메우는 마케팅 기획자 정혜민입니다.</p>
+                    <a href="#profile" class="btn">프로필 확인하기</a>
+                </div>
+                <div class="hero-image">
+                    <div class="photo-frame">
+                        <img src="Gemini_Generated_Image_hvarbehvarbehvar-Photoroom.jpg" alt="콘텐츠 마케터 정혜민 프로필 사진">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="container">
+            <h2>Profile & Capabilities</h2>
+            <div class="profile-wrapper">
+                
+                <div>
+                    <table class="info-table">
+                        <tr>
+                            <th>이름</th>
+                            <td>정혜민 (Jeong Hyemin)</td>
+                        </tr>
+                        <tr>
+                            <th>생년월일</th>
+                            <td>2000.01.31</td>
+                        </tr>
+                        <tr>
+                            <th>연락처</th>
+                            <td>010-4110-8818</td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td><a href="mailto:skfo7620@naver.com">skfo7620@naver.com</a></td>
+                        </tr>
+                        <tr>
+                            <th>블로그</th>
+                            <td><a href="https://blog.naver.com/skfo7620" target="_blank">blog.naver.com/skfo7620</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="skills-container">
+                    <h3>보유 기술 및 툴 스택</h3>
+                    <div class="skill-tags">
+                        <span class="tag-item">Content Marketing</span>
+                        <span class="tag-item">Google Ads</span>
+                        <span class="tag-item">네이버 검색광고</span>
+                        <span class="tag-item">Adobe Illustrator</span>
+                        <span class="tag-item">Adobe Premiere Pro</span>
+                        <span class="tag-item">Canva</span>
+                        <span class="tag-item">Photoshop</span>
+                        <span class="tag-item">MS Office</span>
+                    </div>
+
+                    <h3>자격 사항</h3>
+                    <div class="cert-item"><span>2025.07</span>GTQ 그래픽기술자격 1급 (KPC 한국생산성본부)</div>
+                    <div class="cert-item"><span>2021.07</span>ITQ 한글, 엑셀, 파워포인트 (KPC 한국생산성본부)</div>
+                    <div class="cert-item"><span>2017.07</span>전산응용건축제도기능사 (한국산업인력공단)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="container">
+            <h2>Experience</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.03 - 현재</div>
+                    <div class="timeline-title">인하공업전문대학 디지털마케팅공학과</div>
+                    <div class="timeline-desc">학과 부학회장 활동 (2026.03) 및 학과 사무실 근로 장학생 행정 지원 (2025.07)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.12 - 2026.02</div>
+                    <div class="timeline-title">(주)다잘 디지털마케팅 | 인턴 실습</div>
+                    <div class="timeline-desc">디지털 마케팅 실무 참여, 콘텐츠 기획 및 데이터 정량화 분석 세팅 어시스트</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07 - 2026.01</div>
+                    <div class="timeline-title">인천신용보증재단 이커머스 서포터즈</div>
+                    <div class="timeline-desc">대학생 서포터즈 정식 활동, 소상공인 판로 개척 마케팅 기획 및 콘텐츠 제작 주도</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2022.03 - 2025.03</div>
+                    <div class="timeline-title">조 말론 런던 (Jo Malone London)</div>
+                    <div class="timeline-desc">하이엔드 부티크 매장 운영 및 고객 응대를 경험하며 프리미엄 소비자 인사이트 수립</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2021.05 - 2022.02</div>
+                    <div class="timeline-title">딥티크 (Diptyque)</div>
+                    <div class="timeline-desc">브랜드 스토리텔링 기반 차별화된 향수 큐레이션 및 CX 고객 경험 응대 서비스 지원</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2017.10 - 2021.04</div>
+                    <div class="timeline-title">프레쉬 코리아 (Fresh Korea)</div>
+                    <div class="timeline-desc">밀착형 카운셀링 및 브랜드 프로모션 기획 지원을 통한 고도화된 백화점 서비스 역량 확보</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>Get In Touch</h2>
+                    <p>정혜민 님의 통합적인 역량과 이력에 관해 궁금한 점이 있으시거나,<br>비즈니스의 정량적 성장을 함께 만들어갈 채용·협업 제안은 언제나 환영합니다.</p>
+                    <a href="mailto:skfo7620@naver.com" class="btn">이메일 보내기</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="padding: 0;">
+            <p>&copy; 2026 JEONG HYEMIN. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
