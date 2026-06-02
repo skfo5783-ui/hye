@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skfo5783-ui.github.io/hye/sitemap.xml
