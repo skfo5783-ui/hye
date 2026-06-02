@@ -74,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         html {
-            /* 💡 버튼을 눌렀을 때 해당 영역으로 부드럽게 화면을 스크롤하는 액션 기능 */
             scroll-behavior: smooth; 
         }
 
@@ -96,14 +95,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             list-style: none;
         }
 
-        /* 공통 레이아웃 컨테이너 */
         .container {
             max-width: 1140px;
             margin: 0 auto;
             padding: 100px 20px;
         }
 
-        /* 클릭 액션을 극대화한 버튼 스타일 */
         .btn {
             display: inline-block;
             background-color: var(--primary-navy);
@@ -119,10 +116,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .btn:hover {
             background-color: var(--secondary-blue);
             border-color: var(--secondary-blue);
-            transform: translateY(-2px); /* 호버 시 가볍게 뜨는 마이크로 인터랙션 */
+            transform: translateY(-2px);
         }
 
-        /* --- 3. 헤더 영역 (Navigation) --- */
+        /* 인하공전 배너 스타일 추가 */
+        .school-banner {
+            display: block;
+            margin-top: 20px;
+            background-color: #f1f5f9;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--secondary-blue);
+            font-weight: 600;
+            border-radius: 4px;
+        }
+        .school-banner:hover {
+            background-color: #e2e8f0;
+            color: var(--primary-navy);
+        }
+
+        /* --- 3. 헤더 영역 --- */
         header {
             position: fixed;
             top: 0;
@@ -131,7 +146,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-color: rgba(255, 255, 255, 0.95);
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
-            backdrop-filter: blur(8px); /* 상단 투명 유리창 효과 */
+            backdrop-filter: blur(8px);
         }
 
         header .header-inner {
@@ -165,7 +180,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: var(--primary-navy);
         }
 
-        /* --- 4. 히어로 섹션 (Main 카피 & 프로필 사진) --- */
+        /* --- 4. 히어로 섹션 --- */
         #hero {
             min-height: 100vh;
             display: flex;
@@ -205,218 +220,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .hero-image {
             flex: 0.8;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
         }
 
-        /* 사진 프레임 고급화 */
         .photo-frame {
             width: 100%;
             max-width: 320px;
-            aspect-ratio: 3 / 4; /* 프로필 사진 규격 비율 */
+            aspect-ratio: 3 / 4;
             background-color: var(--bg-light);
             border: 1px solid var(--border-color);
-            box-shadow: 0 15px 35px rgba(15, 26, 44, 0.08); /* 은은하고 직관적인 그림자 */
+            box-shadow: 0 15px 35px rgba(15, 26, 44, 0.08);
             overflow: hidden;
         }
 
         .photo-frame img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 깨짐 없이 비율을 유지하며 가득 채움 */
+            object-fit: cover;
             display: block;
         }
 
-        /* --- 5. 섹션 제목 --- */
-        section h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-navy);
-            margin-bottom: 48px;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-        }
+        /* --- 5. 이하 섹션 생략 (기존 유지) --- */
+        section h2 { font-size: 1.8rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 48px; text-transform: uppercase; letter-spacing: 0.03em; }
+        #profile { background-color: var(--bg-light); }
+        .profile-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .info-table { width: 100%; border-collapse: collapse; }
+        .info-table th, .info-table td { padding: 15px 0; border-bottom: 1px solid var(--border-color); text-align: left; }
+        .info-table th { width: 100px; color: var(--text-muted); font-weight: 500; }
+        .info-table td a { color: var(--secondary-blue); }
+        .info-table td a:hover { text-decoration: underline; }
+        .skills-container h3 { font-size: 1.1rem; color: var(--primary-navy); margin-bottom: 20px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 35px; }
+        .tag-item { background-color: #ffffff; padding: 8px 16px; border: 1px solid var(--border-color); font-size: 0.9rem; color: var(--secondary-blue); font-weight: 500; }
+        .cert-item { font-size: 0.9rem; margin-bottom: 10px; color: var(--text-dark); }
+        .cert-item span { color: var(--text-muted); margin-right: 12px; font-weight: 300; }
+        #experience { background-color: #ffffff; }
+        .timeline { position: relative; max-width: 850px; }
+        .timeline-item { padding-left: 30px; position: relative; margin-bottom: 45px; }
+        .timeline-item::before { content: ''; position: absolute; left: 0; top: 7px; width: 8px; height: 8px; background-color: var(--secondary-blue); border-radius: 50%; }
+        .timeline-date { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-bottom: 4px; }
+        .timeline-title { font-size: 1.15rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 6px; }
+        .timeline-desc { font-size: 0.95rem; color: var(--text-dark); }
+        #contact { background-color: var(--bg-light); }
+        .contact-box { max-width: 600px; margin: 0 auto; text-align: center; }
+        .contact-box p { margin-bottom: 35px; color: var(--text-muted); }
+        footer { background-color: var(--primary-navy); color: #ffffff; text-align: center; padding: 40px 20px; font-size: 0.85rem; font-weight: 300; letter-spacing: 0.05em; }
 
-        /* --- 6. 인적사항 & 역량 섹션 (Profile) --- */
-        #profile {
-            background-color: var(--bg-light);
-        }
-
-        .profile-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .info-table th, .info-table td {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
-            text-align: left;
-        }
-
-        .info-table th {
-            width: 100px;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .info-table td a {
-            color: var(--secondary-blue);
-        }
-
-        .info-table td a:hover {
-            text-decoration: underline;
-        }
-
-        /* 직관적인 역량 디자인 구역 */
-        .skills-container h3 {
-            font-size: 1.1rem;
-            color: var(--primary-navy);
-            margin-bottom: 20px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 35px;
-        }
-
-        .tag-item {
-            background-color: #ffffff;
-            padding: 8px 16px;
-            border: 1px solid var(--border-color);
-            font-size: 0.9rem;
-            color: var(--secondary-blue);
-            font-weight: 500;
-        }
-
-        .cert-item {
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            color: var(--text-dark);
-        }
-        .cert-item span {
-            color: var(--text-muted);
-            margin-right: 12px;
-            font-weight: 300;
-        }
-
-        /* --- 7. 상세 이력 타임라인 섹션 (Experience) --- */
-        #experience {
-            background-color: #ffffff;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 850px;
-        }
-
-        .timeline-item {
-            padding-left: 30px;
-            position: relative;
-            margin-bottom: 45px;
-        }
-
-        /* 세련된 세로선 인디케이터 구동 */
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 7px;
-            width: 8px;
-            height: 8px;
-            background-color: var(--secondary-blue);
-            border-radius: 50%;
-        }
-
-        .timeline-date {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-
-        .timeline-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary-navy);
-            margin-bottom: 6px;
-        }
-
-        .timeline-desc {
-            font-size: 0.95rem;
-            color: var(--text-dark);
-        }
-
-        /* --- 8. 컨택트 섹션 (Contact) --- */
-        #contact {
-            background-color: var(--bg-light);
-        }
-
-        .contact-box {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-box p {
-            margin-bottom: 35px;
-            color: var(--text-muted);
-        }
-
-        /* --- 9. 푸터 영역 --- */
-        footer {
-            background-color: var(--primary-navy);
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.85rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-
-        /* --- 10. ⚡ 반응형 미디어 쿼리 (스마트폰 및 태블릿 완벽 대응) ⚡ --- */
-        @media (max-width: 992px) {
-            .hero-text h1 { font-size: 2.3rem; }
-        }
-
+        @media (max-width: 992px) { .hero-text h1 { font-size: 2.3rem; } }
         @media (max-width: 768px) {
-            /* 모바일 화면 가독성을 위한 구조 재배치 */
-            #hero .container {
-                flex-direction: column-reverse; /* 모바일에서 사진이 상단, 카피가 하단으로 */
-                text-align: center;
-                gap: 40px;
-                padding: 60px 20px;
-            }
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-            .hero-text p {
-                font-size: 1rem;
-            }
-            .profile-wrapper {
-                grid-template-columns: 1fr; /* 2열로 나오던 프로필을 모바일에서는 1열로 수직 정렬 */
-                gap: 40px;
-            }
-            nav ul {
-                display: none; /* 모바일 환경의 깔끔함을 위한 네비게이션 간소화 */
-            }
-            section {
-                padding: 60px 0;
-            }
-            section h2 {
-                text-align: center;
-                margin-bottom: 30px;
-            }
-            .photo-frame {
-                max-width: 260px; /* 모바일 기기 크기에 맞춘 프로필 사진 최적화 */
-            }
+            #hero .container { flex-direction: column-reverse; text-align: center; gap: 40px; padding: 60px 20px; }
+            .hero-text h1 { font-size: 2rem; }
+            .hero-text p { font-size: 1rem; }
+            .profile-wrapper { grid-template-columns: 1fr; gap: 40px; }
+            nav ul { display: none; }
+            section { padding: 60px 0; }
+            section h2 { text-align: center; margin-bottom: 30px; }
+            .photo-frame { max-width: 260px; }
         }
     </style>
 </head>
@@ -452,6 +312,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="photo-frame">
                         <img src="정혜민.png" alt="콘텐츠 마케터 정혜민 프로필 사진">
                     </div>
+                    <!-- 인하공전 배너 추가 -->
+                    <a href="https://www.inhatc.ac.kr/sites/kr/index.do" target="_blank" class="school-banner">
+                        인하공업전문대학 바로가기
+                    </a>
                 </div>
             </div>
         </section>
